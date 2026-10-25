@@ -3,7 +3,7 @@
 Only the latest `main` is supported.
 
 Please report vulnerabilities privately via
-[GitHub private vulnerability reporting](https://github.com/JNHFlow21/telegram-agent-cli/security/advisories/new)
+[GitHub private vulnerability reporting](https://github.com/risingjerry/telegram-agent-cli/security/advisories/new)
 rather than a public issue.
 
 telegram-native stores your Telegram session under

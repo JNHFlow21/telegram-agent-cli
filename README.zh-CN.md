@@ -4,11 +4,11 @@
 
 **为 AI Agent 打造的 Telegram 命令行工具。** 让 Claude Code、Codex 或任何 Agent 管理你的群组、频道、话题、成员和 Bot —— 走 Telegram 官方 MTProto 协议，JSON 输出，写操作只有加了 `--execute` 才会真正执行。
 
-[![CI](https://github.com/JNHFlow21/telegram-agent-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/JNHFlow21/telegram-agent-cli/actions/workflows/ci.yml)
+[![CI](https://github.com/risingjerry/telegram-agent-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/risingjerry/telegram-agent-cli/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-2AABEE.svg)](LICENSE)
 ![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-3776AB.svg)
 ![MTProto](https://img.shields.io/badge/Telegram-MTProto%20via%20Telethon-26A5E4.svg)
-[![GitHub stars](https://img.shields.io/github/stars/JNHFlow21/telegram-agent-cli?style=social)](https://github.com/JNHFlow21/telegram-agent-cli/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/risingjerry/telegram-agent-cli?style=social)](https://github.com/risingjerry/telegram-agent-cli/stargazers)
 
 [English](README.md) · 简体中文
 
@@ -33,7 +33,7 @@ Agent 很擅长"给发布会建个群，加一个 Releases 话题，拉这三个
 ## 安装
 
 ```sh
-git clone https://github.com/JNHFlow21/telegram-agent-cli && cd telegram-agent-cli && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt && python3 install_global.py --with-skill
+git clone https://github.com/risingjerry/telegram-agent-cli && cd telegram-agent-cli && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt && python3 install_global.py --with-skill
 ```
 
 这会把 `telegram-native` 链接到 `~/.local/bin`，并（加 `--with-skill` 时）把 Agent Skill 复制到 `~/.claude/skills/` 和 `~/.agents/skills/`。已有文件会先备份，不会被覆盖。只想要命令行就去掉 `--with-skill`。
@@ -61,7 +61,7 @@ telegram-native chats list     # 只读检查
 python3 install_global.py --with-skill
 
 # 2. 用 skills CLI（https://github.com/vercel-labs/skills）
-npx skills add JNHFlow21/telegram-agent-cli -g -a claude-code -a codex
+npx skills add risingjerry/telegram-agent-cli -g -a claude-code -a codex
 
 # 3. 手动复制
 cp -r skills/telegram-native ~/.claude/skills/    # Claude Code
@@ -117,7 +117,7 @@ Agent ──shell──▶ telegram-native ──MTProto (Telethon)──▶ Tel
 
 ### 怎么让 Claude Code 操控 Telegram？
 
-用 `--with-skill` 安装（或 `npx skills add JNHFlow21/telegram-agent-cli`），用 `telegram-native auth qr` 登录一次，然后直接用自然语言吩咐 Claude Code。Skill 会让它先查 `auth status`、每个写操作先预检、等你同意后才加 `--execute`。Codex、Cursor 以及任何能跑命令行的 Agent 同理。
+用 `--with-skill` 安装（或 `npx skills add risingjerry/telegram-agent-cli`），用 `telegram-native auth qr` 登录一次，然后直接用自然语言吩咐 Claude Code。Skill 会让它先查 `auth status`、每个写操作先预检、等你同意后才加 `--execute`。Codex、Cursor 以及任何能跑命令行的 Agent 同理。
 
 ### AI Agent 怎么学会用 telegram-native？
 
