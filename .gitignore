@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+*.session
+*.session-journal
+*.session-wal
+*.session-shm
+receipts/
+bots/
+*.png
+downloads/
+accounts.json
+*.sqlite
+*.db
+.DS_Store
