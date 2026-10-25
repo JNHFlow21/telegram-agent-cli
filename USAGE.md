@@ -33,7 +33,7 @@ TelegramSwift 开源客户端公开的 `api_id/api_hash`（标识客户端应用
 ## 2. 安装与第一次授权
 
 ```sh
-git clone https://github.com/JNHFlow21/telegram-native && cd telegram-native
+git clone https://github.com/JNHFlow21/telegram-agent-cli && cd telegram-agent-cli
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 python3 install_global.py            # 加 --with-skill 同时安装 Agent Skill

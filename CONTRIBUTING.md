@@ -5,7 +5,7 @@ Thanks for helping improve telegram-native!
 ## Setup
 
 ```sh
-git clone https://github.com/JNHFlow21/telegram-native && cd telegram-native
+git clone https://github.com/JNHFlow21/telegram-agent-cli && cd telegram-agent-cli
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 ```
 

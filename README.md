@@ -1,14 +1,14 @@
 <div align="center">
 
-# telegram-native
+# telegram-agent-cli
 
 **A Telegram CLI built for AI agents.** Let Claude Code, Codex or any agent manage your groups, channels, forum topics, members and bots — over Telegram's official MTProto API, with JSON output and writes that only happen when you say `--execute`.
 
-[![CI](https://github.com/JNHFlow21/telegram-native/actions/workflows/ci.yml/badge.svg)](https://github.com/JNHFlow21/telegram-native/actions/workflows/ci.yml)
+[![CI](https://github.com/JNHFlow21/telegram-agent-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/JNHFlow21/telegram-agent-cli/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-2AABEE.svg)](LICENSE)
 ![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-3776AB.svg)
 ![MTProto](https://img.shields.io/badge/Telegram-MTProto%20via%20Telethon-26A5E4.svg)
-[![GitHub stars](https://img.shields.io/github/stars/JNHFlow21/telegram-native?style=social)](https://github.com/JNHFlow21/telegram-native/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/JNHFlow21/telegram-agent-cli?style=social)](https://github.com/JNHFlow21/telegram-agent-cli/stargazers)
 
 English · [简体中文](README.zh-CN.md)
 
@@ -33,7 +33,7 @@ Agents are good at "set up a group for the launch, add a Releases topic, invite 
 ## Install
 
 ```sh
-git clone https://github.com/JNHFlow21/telegram-native && cd telegram-native && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt && python3 install_global.py --with-skill
+git clone https://github.com/JNHFlow21/telegram-agent-cli && cd telegram-agent-cli && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt && python3 install_global.py --with-skill
 ```
 
 This links `telegram-native` into `~/.local/bin` and (with `--with-skill`) copies the agent skill into `~/.claude/skills/` and `~/.agents/skills/`. Existing files are backed up, never overwritten. Leave out `--with-skill` if you only want the CLI.
@@ -61,7 +61,7 @@ Install it any of these ways:
 python3 install_global.py --with-skill
 
 # 2. with the skills CLI (https://github.com/vercel-labs/skills)
-npx skills add JNHFlow21/telegram-native -g -a claude-code -a codex
+npx skills add JNHFlow21/telegram-agent-cli -g -a claude-code -a codex
 
 # 3. by hand
 cp -r skills/telegram-native ~/.claude/skills/    # Claude Code
@@ -117,7 +117,7 @@ agent ──shell──▶ telegram-native ──MTProto (Telethon)──▶ Tel
 
 ### How do I let Claude Code control Telegram?
 
-Install telegram-native with `--with-skill` (or `npx skills add JNHFlow21/telegram-native`), log in once with `telegram-native auth qr`, and ask Claude Code in plain language. The skill tells it to check `auth status`, preview every write, and wait for your go-ahead before adding `--execute`. The same works for Codex, Cursor and any agent that can run shell commands.
+Install telegram-native with `--with-skill` (or `npx skills add JNHFlow21/telegram-agent-cli`), log in once with `telegram-native auth qr`, and ask Claude Code in plain language. The skill tells it to check `auth status`, preview every write, and wait for your go-ahead before adding `--execute`. The same works for Codex, Cursor and any agent that can run shell commands.
 
 ### How does my AI agent learn to use telegram-native?
 
