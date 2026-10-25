@@ -113,6 +113,13 @@ agent ──shell──▶ telegram-native ──MTProto (Telethon)──▶ Tel
  "error": null, "warnings": [], "meta": {"action": "group.create", "request_id": "group-create-…", "elapsed_ms": 3}}
 ```
 
+## Limits
+
+- Unofficial client: Telegram's anti-spam rules and FloodWait still apply, and mass messaging or mass adding can get an account restricted. Writes are never retried automatically; wait for `retry_after`.
+- It is a separate client: it cannot see Secret Chats or drafts that exist only on another device, and it does not control the Telegram app.
+- CLI only: no MCP server, no Windows support (macOS or Linux, Python 3.12+).
+- Some Telegram APIs have no equivalent (for example forum topic icon colors cannot be edited, and per-topic mark-read is not supported); see [docs/FEATURES.md](docs/FEATURES.md) (Chinese) for the per-command notes.
+
 ## FAQ
 
 ### How do I let Claude Code control Telegram?
@@ -178,5 +185,7 @@ Built on [Telethon](https://github.com/LonamiWebs/Telethon) by Lonami. Not affil
 ---
 
 If this saved your agent a few hundred clicks, a ⭐ helps other people find it.
+
+[![Star History Chart](https://api.star-history.com/svg?repos=risingjerry/telegram-agent-cli&type=Date)](https://star-history.com/#risingjerry/telegram-agent-cli&Date)
 
 [MIT](LICENSE)

@@ -1,0 +1,14 @@
+name: Feature request
+description: Suggest a command or capability
+labels: [enhancement]
+body:
+  - type: textarea
+    id: want
+    attributes:
+      label: What do you want an agent to be able to do on Telegram?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does it matter, and what do you do today instead?

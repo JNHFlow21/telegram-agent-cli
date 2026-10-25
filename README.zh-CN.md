@@ -113,6 +113,13 @@ Agent ──shell──▶ telegram-native ──MTProto (Telethon)──▶ Tel
  "error": null, "warnings": [], "meta": {"action": "group.create", "request_id": "group-create-…", "elapsed_ms": 3}}
 ```
 
+## 限制
+
+- 非官方客户端：Telegram 的反垃圾规则和 FloodWait 照样生效，群发消息或批量拉人可能导致账号受限。写操作不会自动重试，请按 `retry_after` 等待。
+- 它是独立客户端：看不到 Secret Chat 和只存在于其他设备上的草稿，也不会操控 Telegram App。
+- 仅命令行：没有 MCP Server，不支持 Windows（需要 macOS 或 Linux、Python 3.12+）。
+- 部分 Telegram 接口本身没有对应能力（例如不能改论坛话题图标颜色，不支持按话题标记已读），逐条说明见 [docs/FEATURES.md](docs/FEATURES.md)。
+
 ## 常见问题
 
 ### 怎么让 Claude Code 操控 Telegram？
@@ -178,5 +185,7 @@ rm -rf ~/.local/share/telegram-native ~/.config/telegram-native   # 会话、回
 ---
 
 如果它帮你的 Agent 省下了几百次点击，点个 ⭐ 能让更多人发现它。
+
+[![Star History Chart](https://api.star-history.com/svg?repos=risingjerry/telegram-agent-cli&type=Date)](https://star-history.com/#risingjerry/telegram-agent-cli&Date)
 
 [MIT](LICENSE)

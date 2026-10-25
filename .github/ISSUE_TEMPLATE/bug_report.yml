@@ -1,0 +1,29 @@
+name: Bug report
+description: A command fails or behaves unexpectedly
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and output
+      description: The exact command and its tg.v1 JSON (remove chat IDs, usernames, phone numbers and tokens).
+      render: shell
+  - type: input
+    id: version
+    attributes:
+      label: telegram-native version
+      placeholder: "telegram-native --version"
+  - type: input
+    id: env
+    attributes:
+      label: OS and Python version
+      placeholder: "macOS 15, Python 3.12"
+  - type: markdown
+    attributes:
+      value: Never paste your session file, api_hash or bot tokens.
